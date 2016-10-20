@@ -8,10 +8,11 @@
      "default_popup": "popup.html"
   },
   "content_scripts":[{
-      "matches":["http://www.unisoundlive.com/"],
-      "js":["fetch.js"]
+      "matches":["https://*/","http://*/"],
+      "js":["jquery.js","fetch.js"]
   }],
   "background":{
-      "scripts":["background.js"]
-  }
+      "scripts":["jquery.js","background.js"]
+  },
+  "permissions": ["history","bookmarks"]
 }
